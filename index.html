@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro App Desktop - Conversor</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        input {
+            min-width: 300px;
+        }
+
+        #cm {
+            font-size: 5rem;
+            color: #fff;
+        }
+
+        button {
+            min-width: 300px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Conversor de Polegadas para centímetros</h1>
+        <label for="pol">Digite no campo abaixo as polegadas:</label>
+        <input type="text" name="pol" id="pol">
+        <div id="cm"></div>
+        <button onclick="converter()">Converter</button>
+    </div>
+    <script>
+        function converter() {
+            let pol = document.getElementById('pol').value;
+            let cm = document.getElementById('cm');
+            cm.style.margin = '50px 0 45px 0';
+            cm.innerHTML = pol * 2.54 + 'cm';
+        }
+    </script>
+</body>
+
+</html>
